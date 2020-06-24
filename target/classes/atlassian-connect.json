@@ -1,0 +1,50 @@
+{
+  "key": "${addon.key}",
+  "baseUrl": "https://b158250eb0e3.ngrok.io",
+  "name": "Tag for Checkout",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "scopes": ["READ"],
+  "modules": {
+    "generalPages": [
+      {
+        "key": "thymeleaf-page-jira",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "Thymeleaf"
+        },
+        "url": "/thymeleaf"
+      }
+    ],
+    "jiraProjectPages": [
+      {
+        "key": "tag-for-checkout",
+        "name": {
+          "value": "Tag"
+        },
+        "url": "/tag?projectKey=${project.key}",
+        "iconUrl": "/images/tag-icon-sm.png",
+        "weight": 2,
+        "conditions": [
+          {
+            "condition": "user_is_logged_in"
+          },
+          {
+            "condition": "servicedesk.is_agent"
+          },
+          {
+            "condition": "project_type",
+            "params": {
+              "projectTypeKey": "service_desk"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
