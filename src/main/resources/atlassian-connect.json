@@ -1,6 +1,6 @@
 {
   "key": "${addon.key}",
-  "baseUrl": "https://b158250eb0e3.ngrok.io",
+  "baseUrl": "https://88bdaaca3e18.ngrok.io",
   "name": "Tag for Checkout",
   "authentication": {
     "type": "jwt"

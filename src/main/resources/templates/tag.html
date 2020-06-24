@@ -17,10 +17,9 @@
         <section class="aui-page-panel-item">
                 <form onclick="return false;" class="aui">
                     <div class="field-group center">
-                        ${test}
-                        <p th:value="${test}"></p>
                         <!--<label for="name">Item SKU<span class="aui-icon icon-required">required</span></label>-->
-                        <input id="sku" class="text float-left scan-text" type="text" name="name">
+                        <input id="sku" class="text float-left scan-text" type="text"
+                               name="name" placeholder="Scan SKU to check item...">
                         <button type="submit" id="scan-button" class="aui-button aui-button-primary float-left">Scan</button>
                     </div>
                 </form>
