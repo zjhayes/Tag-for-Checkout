@@ -1,7 +1,10 @@
 package com.mumosystems.tag.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
+@JsonIgnoreProperties
 public class Item
 {
     private String itemId;
@@ -127,7 +130,7 @@ public class Item
     @Override
     public String toString()
     {
-        return "ClassPojo [itemId = "+itemId+", quantity = "+quantity+", itemTitle = "+itemTitle+
+        return "Item [itemId = "+itemId+", quantity = "+quantity+", itemTitle = "+itemTitle+
                 ", price = "+price+", vendorId = "+vendorId+", itemDescription = "+itemDescription+
                 ", type = "+type+", items = "+items+", backFill = "+backFill+", status = "+status+"]";
     }

@@ -1,13 +1,10 @@
 package com.mumosystems.tag.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"total", "user", "address", "hasDebit"})
 public class CheckoutProperties
 {
-    private String total;
-
-    private Address address;
-
-    private String hasDebit;
-
     private String issueIdOrKey;
 
     private String[] unlistedItemRequests;
@@ -16,39 +13,7 @@ public class CheckoutProperties
 
     private Item[] items;
 
-    private User user;
-
     private String status;
-
-    public String getTotal ()
-    {
-        return total;
-    }
-
-    public void setTotal (String total)
-    {
-        this.total = total;
-    }
-
-    public Address getAddress ()
-    {
-        return address;
-    }
-
-    public void setAddress (Address address)
-    {
-        this.address = address;
-    }
-
-    public String getHasDebit ()
-    {
-        return hasDebit;
-    }
-
-    public void setHasDebit (String hasDebit)
-    {
-        this.hasDebit = hasDebit;
-    }
 
     public String getIssueIdOrKey ()
     {
@@ -90,16 +55,6 @@ public class CheckoutProperties
         this.items = items;
     }
 
-    public User getUser ()
-    {
-        return user;
-    }
-
-    public void setUser (User user)
-    {
-        this.user = user;
-    }
-
     public String getStatus ()
     {
         return status;
@@ -113,8 +68,7 @@ public class CheckoutProperties
     @Override
     public String toString()
     {
-        return "ClassPojo [total = "+total+", address = "+address+", hasDebit = "+hasDebit+
-                ", issueIdOrKey = "+issueIdOrKey+", unlistedItemRequests = "+unlistedItemRequests+
-                ", department = "+department+", items = "+items+", user = "+user+", status = "+status+"]";
+        return "CheckoutProperties [issueIdOrKey = "+issueIdOrKey+", unlistedItemRequests = "+unlistedItemRequests+
+                ", department = "+department+", items = "+items+", status = "+status+"]";
     }
 }

@@ -2,10 +2,7 @@
   "key": "${addon.key}",
   "baseUrl": "${addon.base-url}",
   "name": "Tag for Checkout",
-  "description": "Add barcode scanner search functionality to your Checkout experience.",
-  "icon": {
-    "url": "/images/tag-icon.png"
-  },
+  "description": "Manage your Checkout items faster with any standard USB barcode reader.",
   "vendor": {
     "name": "Mumo Systems",
     "url": "https://www.mumosystems.com"

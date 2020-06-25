@@ -1,5 +1,8 @@
 package com.mumosystems.tag.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties
 public class Department
 {
     private String accountId;
@@ -89,7 +92,7 @@ public class Department
     @Override
     public String toString()
     {
-        return "ClassPojo [accountId = "+accountId+", code = "+code+", contactEmail = "+contactEmail+
+        return "Department [accountId = "+accountId+", code = "+code+", contactEmail = "+contactEmail+
                 ", name = "+name+", id = "+id+", userKey = "+userKey+", budget = "+budget+"]";
     }
 }

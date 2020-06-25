@@ -1,8 +1,6 @@
 com/mumosystems/tag/model/CheckoutProperties.class
-com/mumosystems/tag/model/Address.class
-com/mumosystems/tag/controller/TagController.class
 com/mumosystems/tag/model/Item.class
 com/mumosystems/tag/model/Department.class
+com/mumosystems/tag/controller/TagController.class
 com/mumosystems/tag/controller/ThymeleafController.class
-com/mumosystems/tag/model/User.class
 com/mumosystems/tag/services/JiraService.class
