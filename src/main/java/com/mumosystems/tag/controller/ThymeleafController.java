@@ -1,4 +1,4 @@
-package com.mumosystems.tag;
+package com.mumosystems.tag.controller;
 
 import com.atlassian.connect.spring.IgnoreJwt;
 import org.springframework.stereotype.Controller;

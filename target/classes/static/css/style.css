@@ -15,6 +15,7 @@ h1, p.subtitle {
 
 .header-image {
     width: 35%;
+    padding-right: 5em;
 }
 
 form.aui .text.scan-text{

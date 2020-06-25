@@ -1,3 +1,4 @@
+/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/services/JiraService.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/AddonApplication.java
-/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/ThymeleafController.java
-/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/TagController.java
+/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/controller/ThymeleafController.java
+/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/controller/TagController.java

@@ -1,13 +1,23 @@
 {
   "key": "${addon.key}",
-  "baseUrl": "https://88bdaaca3e18.ngrok.io",
+  "baseUrl": "${addon.base-url}",
   "name": "Tag for Checkout",
+  "description": "Add barcode scanner search functionality to your Checkout experience.",
+  "icon": {
+    "url": "/images/tag-icon.png"
+  },
+  "vendor": {
+    "name": "Mumo Systems",
+    "url": "https://www.mumosystems.com"
+  },
   "authentication": {
     "type": "jwt"
   },
   "lifecycle": {
     "installed": "/installed",
-    "uninstalled": "/uninstalled"
+    "uninstalled": "/uninstalled",
+    "enabled": "/enabled",
+    "disabled": "/disabled"
   },
   "scopes": ["READ"],
   "modules": {
