@@ -15,8 +15,7 @@ h1, p.subtitle {
 
 .header-image {
     width: 35%;
-    padding-right: 5em;
-    padding: 3em;
+    padding: 3em 6em 3em 0;
 }
 
 #scan-button {
@@ -28,7 +27,6 @@ h1, p.subtitle {
 }
 
 #scan-button:hover,
-#scan-button:focus,
 #scan-button:active {
     background-image: url(/images/tag-icon-sm.png);
     background-size: 65%;

@@ -18,8 +18,7 @@ h1, p.subtitle {
     padding: 3em 6em 3em 0;
 }
 
-#scan-button
-#scan-button:focus {
+#scan-button {
     background-image: url(/images/tag-icon-white-sm.png);
     background-size: 65%;
     background-repeat: no-repeat;

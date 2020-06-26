@@ -26,7 +26,7 @@ public class SearchService
             List<Item> items = issue.getCheckout().getItems();
             for(Item item : items)
             {
-                // Capture item if sku matches.
+                // Capture issue and item if sku matches.
                 if(item.getSKU().equals(sku))
                 {
                     SearchResult result = new SearchResult(issue, item);

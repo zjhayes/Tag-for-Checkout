@@ -22,8 +22,8 @@ public class TagController
         ModelAndView model = new ModelAndView();
         try {
             model.setViewName("project-page");
-            List<SearchResult> result = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
-            model.addObject("result", result);
+            List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
+            model.addObject("results", results);
         } catch(Exception ex)
         {
             model.setViewName("error");

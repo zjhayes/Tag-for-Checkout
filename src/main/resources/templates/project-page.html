@@ -25,7 +25,6 @@
             </section>
         </div>
         <div class="aui-page-panel">
-            <p th:text="${result}"></p>
             <table class="aui">
                 <thead>
                     <tr>
@@ -35,17 +34,21 @@
                         <th id="quantity">Quantity</th>
                         <th id="price">Price</th>
                         <th id="type">Type</th>
-                        <th id="description">Description</th>
                         <th id="status">Status</th>
                     </tr>
                 </thead>
-                <tbody>
-                <tr th:each="issue : ${result.getIssues()}">
-                    <td th:href="${issue.getSelf()}"
-                        th:text="${issue.getKey()}">
-                    </td>
+                <tbody><!--th:href="@{'/issues(key=))' + ${result.getIssue().getKey()}}"-->
+                <tr th:each="result : ${results}">
+                    <td><a th:href="@{/issues}"
+                           th:target="_blank"
+                           th:text="${result.getIssue().getKey()}">
+                    </a></td>
                     <td text="status"></td>
-                    <td th:text="${result.}
+                    <td th:text="${result.getItem().getItemTitle()}"></td>
+                    <td th:text="${result.getItem().getQuantity()}"></td>
+                    <td th:text="${result.getItem().getPrice()}"></td>
+                    <td th:text="${result.getItem().getType()}"></td>
+                    <td th:text="${result.getItem().getStatus()}"></td>
                 </tr>
                 </tbody>
             </table>

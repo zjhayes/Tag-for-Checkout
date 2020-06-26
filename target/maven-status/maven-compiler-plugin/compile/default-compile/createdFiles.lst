@@ -5,3 +5,4 @@ com/mumosystems/tag/model/Department.class
 com/mumosystems/tag/controller/TagController.class
 com/mumosystems/tag/controller/ThymeleafController.class
 com/mumosystems/tag/services/JiraService.class
+com/mumosystems/tag/controller/JiraController.class
