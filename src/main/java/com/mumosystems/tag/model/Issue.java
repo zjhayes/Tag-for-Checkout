@@ -7,6 +7,7 @@ public class Issue
 {
     private String id;
     private String key;
+    private CheckoutProperties checkout;
 
     public String getId ()
     {
@@ -26,6 +27,16 @@ public class Issue
     public void setKey (String key)
     {
         this.key = key;
+    }
+
+    public CheckoutProperties getCheckout()
+    {
+        return checkout;
+    }
+
+    public void setCheckout(CheckoutProperties checkout)
+    {
+        this.checkout = checkout;
     }
 
     @Override

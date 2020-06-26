@@ -36,7 +36,7 @@
         },
         "url": "/tag?projectKey=${project.key}",
         "iconUrl": "/images/tag-icon-sm.png",
-        "weight": 2,
+        "weight": 5,
         "conditions": [
           {
             "condition": "user_is_logged_in"
