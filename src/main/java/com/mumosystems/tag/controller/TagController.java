@@ -21,7 +21,7 @@ public class TagController
         try {
             model.setViewName("project-page");
             SearchResult result = search.searchForItem(projectKey, "Used to staple paper.", 20,0);
-            model.addObject("result", result);
+            model.addObject("result", result.toString());
         } catch(Exception ex)
         {
             model.setViewName("error");

@@ -15,7 +15,25 @@ h1, p.subtitle {
 
 .header-image {
     width: 35%;
-    padding-right: 5em;
+    padding: 3em 6em 3em 0;
+}
+
+#scan-button {
+    background-image: url(/images/tag-icon-white-sm.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.2em;
+}
+
+#scan-button:hover,
+#scan-button:focus,
+#scan-button:active {
+    background-image: url(/images/tag-icon-sm.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.2em;
 }
 
 form.aui .text.scan-text{
@@ -24,9 +42,8 @@ form.aui .text.scan-text{
 }
 
 .aui-button.aui-button-primary {
-    background-color: #FFF;
-    color: #FF3860;
-    border:2px solid #FF3860;
+    background-color: #FF3860;
+    color: #FFF;
     line-height: 2px;
     height: 40px;
     font-size: 1.4em;
@@ -37,8 +54,9 @@ form.aui .text.scan-text{
 .aui-button.aui-button-primary:hover,
 .aui-button.aui-button-primary:focus,
 .aui-button.aui-button-primary:active {
-    background-color: #FF3860;
-    color: #FFF;
+    background-color: #FFF;
+    color: #FF3860;
+    border:2px solid #FF3860;
 }
 
 .aui-page-panel {

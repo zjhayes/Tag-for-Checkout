@@ -11,22 +11,21 @@
             </div>
         </div>
     </header>
-
     <div class="aui-page-panel main-panel">
-      <div class="aui-page-panel-inner">
-          <section class="aui-page-panel-item">
-              <form onclick="return false;" class="aui">
-                  <div class="field-group center">
-                      <!--<label for="name">Item SKU<span class="aui-icon icon-required">required</span></label>-->
-                      <input id="sku" class="text float-left scan-text" type="text"
+        <div class="aui-page-panel-inner">
+            <section class="aui-page-panel-item">
+                <form onclick="return false;" class="aui">
+                    <div class="field-group center">
+                        <!--<label for="name">Item SKU<span class="aui-icon icon-required">required</span></label>-->
+                        <input id="sku" class="text float-left scan-text" type="text"
                              name="name" placeholder="Scan barcode or enter SKU to check item...">
-                      <button type="submit" id="scan-button" class="aui-button aui-button-primary float-left">Scan</button>
-                  </div>
-              </form>
-          </section>
-      </div>
-        <div>
-            <p th:text="${issues}"></p>
+                        <button type="submit" id="scan-button" class="aui-button aui-button-primary float-left"></button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="aui-page-panel">
+            <p th:text="${result}"></p>
         </div>
     </div>
 </body>

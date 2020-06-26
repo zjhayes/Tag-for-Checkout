@@ -35,8 +35,8 @@
           "value": "Tag"
         },
         "url": "/tag?projectKey=${project.key}",
-        "iconUrl": "/images/tag-icon-sm.png",
-        "weight": 5,
+        "iconUrl": "/images/tag-icon-gray-sm.png",
+        "weight": 101,
         "conditions": [
           {
             "condition": "user_is_logged_in"
@@ -48,6 +48,15 @@
             "condition": "project_type",
             "params": {
               "projectTypeKey": "service_desk"
+            }
+          },
+          {
+            "condition": "entity_property_equal_to",
+            "params": {
+              "entity": "project",
+              "propertyKey": "mumosystems-checkout",
+              "objectName": "isEnabled",
+              "value": "true"
             }
           }
         ]

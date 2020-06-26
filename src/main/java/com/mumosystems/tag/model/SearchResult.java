@@ -46,4 +46,9 @@ public class SearchResult
     {
         issues.add(issue);
     }
+
+    public String toString()
+    {
+        return "SearchResults: Total= " + getResultTotal() + " Items: " + item.toString();
+    }
 }
