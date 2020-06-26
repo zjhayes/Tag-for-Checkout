@@ -26,6 +26,29 @@
         </div>
         <div class="aui-page-panel">
             <p th:text="${result}"></p>
+            <table class="aui">
+                <thead>
+                    <tr>
+                        <th id="issue">Issue</th>
+                        <th id="issueStatus">Issue Status</th>
+                        <th id="item">Item</th>
+                        <th id="quantity">Quantity</th>
+                        <th id="price">Price</th>
+                        <th id="type">Type</th>
+                        <th id="description">Description</th>
+                        <th id="status">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="issue : ${result.getIssues()}">
+                    <td th:href="${issue.getSelf()}"
+                        th:text="${issue.getKey()}">
+                    </td>
+                    <td text="status"></td>
+                    <td th:text="${result.}
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>

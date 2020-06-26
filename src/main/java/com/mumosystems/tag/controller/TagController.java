@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class TagController
 {
@@ -20,8 +22,8 @@ public class TagController
         ModelAndView model = new ModelAndView();
         try {
             model.setViewName("project-page");
-            SearchResult result = search.searchForItem(projectKey, "Used to staple paper.", 20,0);
-            model.addObject("result", result.toString());
+            List<SearchResult> result = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
+            model.addObject("result", result);
         } catch(Exception ex)
         {
             model.setViewName("error");

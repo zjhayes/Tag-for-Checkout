@@ -2,6 +2,8 @@ package com.mumosystems.tag.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
+
 @JsonIgnoreProperties({"total", "user", "address", "hasDebit"})
 public class CheckoutProperties
 {
@@ -11,7 +13,7 @@ public class CheckoutProperties
 
     private Department department;
 
-    private Item[] items;
+    private ArrayList<Item> items;
 
     private String status;
 
@@ -45,12 +47,12 @@ public class CheckoutProperties
         this.department = department;
     }
 
-    public Item[] getItems ()
+    public ArrayList<Item> getItems ()
     {
         return items;
     }
 
-    public void setItems (Item[] items)
+    public void setItems (ArrayList<Item> items)
     {
         this.items = items;
     }

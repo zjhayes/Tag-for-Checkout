@@ -27,67 +27,67 @@ public class Item
 
     private String status;
 
-    public String getItemId ()
+    public String getItemId()
     {
         return itemId;
     }
 
-    public void setItemId (String itemId)
+    public void setItemId(String itemId)
     {
         this.itemId = itemId;
     }
 
-    public String getQuantity ()
+    public String getQuantity()
     {
         return quantity;
     }
 
-    public void setQuantity (String quantity)
+    public void setQuantity(String quantity)
     {
         this.quantity = quantity;
     }
 
-    public String getItemTitle ()
+    public String getItemTitle()
     {
         return itemTitle;
     }
 
-    public void setItemTitle (String itemTitle)
+    public void setItemTitle(String itemTitle)
     {
         this.itemTitle = itemTitle;
     }
 
-    public String getPrice ()
+    public String getPrice()
     {
         return price;
     }
 
-    public void setPrice (String price)
+    public void setPrice(String price)
     {
         this.price = price;
     }
 
-    public String getVendorId ()
+    public String getVendorId()
     {
         return vendorId;
     }
 
-    public void setVendorId (String vendorId)
+    public void setVendorId(String vendorId)
     {
         this.vendorId = vendorId;
     }
 
-    public String getItemDescription ()
+    public String getItemDescription()
     {
         return itemDescription;
     }
 
-    public void setItemDescription (String itemDescription)
+    public void setItemDescription(String itemDescription)
     {
         this.itemDescription = itemDescription;
     }
 
-    public String getType ()
+    public String getType()
     {
         return type;
     }
@@ -97,34 +97,40 @@ public class Item
         this.type = type;
     }
 
-    public List<String> getItems ()
+    public List<String> getItems()
     {
         return items;
     }
 
-    public void setItems ( List<String> items)
+    public void setItems( List<String> items)
     {
         this.items = items;
     }
 
-    public String getBackFill ()
+    public String getBackFill()
     {
         return backFill;
     }
 
-    public void setBackFill (String backFill)
+    public void setBackFill(String backFill)
     {
         this.backFill = backFill;
     }
 
-    public String getStatus ()
+    public String getStatus()
     {
         return status;
     }
 
-    public void setStatus (String status)
+    public void setStatus(String status)
     {
         this.status = status;
+    }
+
+    public String getSKU()
+    {
+        //TODO Change to SKU
+        return itemDescription;
     }
 
     @Override

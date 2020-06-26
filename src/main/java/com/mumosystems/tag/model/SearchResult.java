@@ -1,20 +1,24 @@
 package com.mumosystems.tag.model;
 
-import java.util.List;
-
 public class SearchResult
 {
-    private Item item;
-    private List<Issue> issues;
+    Issue issue;
+    Item item;
 
-    public int getResultTotal()
+    public SearchResult(Issue issue, Item item)
     {
-        return issues.size();
+        this.issue = issue;
+        this.item = item;
     }
 
-    public boolean hasIssues()
+    public Issue getIssue()
     {
-        return !issues.isEmpty();
+        return issue;
+    }
+
+    public void setIssue(Issue issue)
+    {
+        this.issue = issue;
     }
 
     public Item getItem()
@@ -22,33 +26,17 @@ public class SearchResult
         return item;
     }
 
-    public boolean hasItem()
-    {
-        return item != null;
-    }
-
     public void setItem(Item item)
     {
         this.item = item;
     }
 
-    public List<Issue> getIssues()
-    {
-        return issues;
-    }
-
-    public void setIssues(List<Issue> issues)
-    {
-        this.issues = issues;
-    }
-
-    public void addIssue(Issue issue)
-    {
-        issues.add(issue);
-    }
-
+    @Override
     public String toString()
     {
-        return "SearchResults: Total= " + getResultTotal() + " Items: " + item.toString();
+        return "Result{" +
+                "issue=" + issue +
+                ", item=" + item +
+                '}';
     }
 }

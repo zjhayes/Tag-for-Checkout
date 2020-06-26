@@ -2,14 +2,25 @@ package com.mumosystems.tag.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties({"self", "fields", "expand"})
+@JsonIgnoreProperties({"fields", "expand"})
 public class Issue
 {
+    private String self;
     private String id;
     private String key;
     private CheckoutProperties checkout;
 
-    public String getId ()
+    public String getSelf()
+    {
+        return self;
+    }
+
+    public void setSelf(String self)
+    {
+        this.self = self;
+    }
+
+    public String getId()
     {
         return id;
     }
