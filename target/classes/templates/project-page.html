@@ -37,13 +37,14 @@
                         <th id="status">Status</th>
                     </tr>
                 </thead>
-                <tbody><!--th:href="@{'/issues(key=))' + ${result.getIssue().getKey()}}"-->
+                <tbody>
                 <tr th:each="result : ${results}">
-                    <td><a href="redirect:/issues"
-                           th:target="_blank"
-                           th:text="${result.getIssue().getKey()}">
+                    <td><a href="#"
+                           th:text="${result.getIssue().getKey()}"
+                           th:issuekey = "${result.getIssue().getKey()}"
+                           onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">
                     </a></td>
-                    <td text="status">Status</td>
+                    <td text="status"></td>
                     <td th:text="${result.getItem().getItemTitle()}"></td>
                     <td th:text="${result.getItem().getQuantity()}"></td>
                     <td th:text="${result.getItem().getPrice()}"></td>
