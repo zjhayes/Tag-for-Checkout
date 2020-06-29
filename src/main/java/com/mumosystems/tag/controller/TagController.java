@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -27,27 +28,31 @@ public class TagController
         return model;
     }
 
-    @RequestMapping(value = "/hello-world", method = RequestMethod.GET)
-    @ResponseBody
-    public List<SearchResult> helloWorld() throws Exception
-    {
-        return search.searchEachIssueInProjectForItem("BAR", "Used to staple paper.", 20,0);
-    }
-
     @RequestMapping(value = "/tagSearch", method = RequestMethod.GET)
     @ResponseBody
-    public ModelAndView runTagSearch(@AuthenticationPrincipal AtlassianHostUser hostUser, @RequestParam("projectKey") String projectKey)
+    public ModelAndView runTagSearch(@RequestParam("projectKey") String projectKey)
     {
         ModelAndView model = new ModelAndView();
         try {
             model.setViewName("results");
             List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
             model.addObject("results", results);
+            model.addObject("issueKeysString", createIssueKeyList(results));
         } catch(Exception ex)
         {
             model.setViewName("error");
             model.addObject("error_message", ex.getMessage());
         }
         return model;
+    }
+
+    private String createIssueKeyList(List<SearchResult> results)
+    {
+        List<String> keyList = new ArrayList<>();
+        for(SearchResult result : results)
+        {
+            keyList.add(result.getIssue().getKey());
+        }
+        return String.join(",", keyList);
     }
 }

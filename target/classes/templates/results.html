@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<table class="aui">
-    <thead>
-    <tr>
-        <th id="issue">Issue</th>
-        <th id="issueStatus">Issue Status</th>
-        <th id="item">Item</th>
-        <th id="quantity">Quantity</th>
-        <th id="price">Price</th>
-        <th id="type">Type</th>
-        <th id="status">Status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="result : ${results}">
-        <td><a href="#"
-               th:text="${result.getIssue().getKey()}"
-               th:issuekey = "${result.getIssue().getKey()}"
-               onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">
-        </a></td>
-        <td text="status"></td>
-        <td th:text="${result.getItem().getItemTitle()}"></td>
-        <td th:text="${result.getItem().getQuantity()}"></td>
-        <td th:text="${result.getItem().getPrice()}"></td>
-        <td th:text="${result.getItem().getType()}"></td>
-        <td th:text="${result.getItem().getStatus()}"></td>
-    </tr>
-    </tbody>
-</table>
+<section class="results-section">
+    <table class="aui">
+        <thead>
+        <tr>
+            <th id="issue">Issue</th>
+            <th id="issueStatus">Issue Status</th>
+            <th id="item">Item</th>
+            <th id="quantity">Quantity</th>
+            <th id="price">Price</th>
+            <th id="type">Type</th>
+            <th id="status">Status</th>
+        </tr>
+        </thead>
+        <script>
+
+        </script>
+        <tbody>
+        <tr th:each="result : ${results}">
+            <td><a href="#"
+                   th:text="${result.getIssue().getKey()}"
+                   th:issuekey = "${result.getIssue().getKey()}"
+                   onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">
+            </a></td>
+            <td text="status"></td>
+            <td th:text="${result.getItem().getItemTitle()}"></td>
+            <td th:text="${result.getItem().getQuantity()}"></td>
+            <td th:text="${result.getItem().getPrice()}"></td>
+            <td th:text="${result.getItem().getType()}"></td>
+            <td th:text="${result.getItem().getStatus()}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <button th:sql = "'issue+in+(' + ${issueKeysString} + ')'";
+            onclick="javascript:goToJQLSearch(this.getAttribute('sql')); return false"
+            target="_blank"
+            type="submit"
+            class="aui-button aui-button-primary center top-space">View Issues
+    </button>
+</section>

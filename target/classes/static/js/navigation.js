@@ -11,3 +11,9 @@ function goToJiraIssue(issueKey) {
 function reload() {
     AP.navigator.reload();
 }
+
+// Navigate to JQL Search.
+function goToJQLSearch(sql) {
+    let url = '/issues/?jql=' + sql;
+    AP.navigator.go('site', {relativeUrl: url});
+}

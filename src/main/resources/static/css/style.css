@@ -6,6 +6,14 @@ h1, p.subtitle {
     float: left;
 }
 
+.float-right {
+    float: right;
+}
+
+.top-space {
+    margin-top: 3rem;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -16,6 +24,10 @@ h1, p.subtitle {
 .header-image {
     width: 35%;
     padding: 3em 6em 3em 0;
+}
+
+results-section {
+    background-color: red;
 }
 
 #scan-button {
@@ -32,7 +44,6 @@ h1, p.subtitle {
     background-repeat: no-repeat;
     background-position: center;
     width: 2.2em;
-    outline: 1px dashed #FF3860;
 }
 
 #scan-button:hover,
@@ -65,6 +76,7 @@ form.aui .text.scan-text{
     height: 40px;
     font-size: 1.4em;
     margin-left: .5rem;
+    outline: 1px dashed #FF3860;
 }
 
 .aui-button.aui-button-primary:hover,
@@ -82,7 +94,11 @@ form.aui .text.scan-text{
     background-color: #FFF;
 }
 
-.aui-button:focus {
-    outline: 0;
+.aui-page-panel-inner {
+    margin-bottom: 4rem;
+}
+
+table.aui > tbody > tr {
+    line-height: 3rem;
 }
 
