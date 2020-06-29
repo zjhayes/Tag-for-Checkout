@@ -1,4 +1,4 @@
-window.onload = function () {
+/*window.onload = function () {
     var input = document.getElementById('sku');
     if(input) {
         input.focus();
@@ -10,4 +10,4 @@ window.onload = function () {
             }
         })
     }
-}
+}*/

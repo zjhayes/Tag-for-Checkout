@@ -26,6 +26,15 @@ h1, p.subtitle {
     width: 2.2em;
 }
 
+#scan-button:focus{
+    background-image: url(/images/tag-icon-white-sm.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.2em;
+    outline: 1px dashed #FF3860;
+}
+
 #scan-button:hover,
 #scan-button:active {
     background-image: url(/images/tag-icon-sm.png);
@@ -49,6 +58,14 @@ form.aui .text.scan-text{
     margin-left: .5rem;
 }
 
+.aui-button.aui-button-primary:focus {
+    background-color: #FF3860;
+    color: #FFF;
+    line-height: 2px;
+    height: 40px;
+    font-size: 1.4em;
+    margin-left: .5rem;
+}
 
 .aui-button.aui-button-primary:hover,
 .aui-button.aui-button-primary:active {

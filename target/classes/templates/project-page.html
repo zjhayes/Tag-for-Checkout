@@ -14,7 +14,7 @@
     <div class="aui-page-panel main-panel">
         <div class="aui-page-panel-inner">
             <section class="aui-page-panel-item">
-                <form class="aui" action="#" onsubmit="return search(this)" method="GET">
+                <form class="aui" action="#" onsubmit="search(this); return false" method="GET">
                     <div class="field-group center">
                         <!--<label for="name">Item SKU<span class="aui-icon icon-required">required</span></label>-->
                         <input id="sku" class="text float-left scan-text" type="text"
@@ -26,34 +26,7 @@
             </section>
         </div>
         <div class="aui-page-panel">
-            <table class="aui">
-                <thead>
-                    <tr>
-                        <th id="issue">Issue</th>
-                        <th id="issueStatus">Issue Status</th>
-                        <th id="item">Item</th>
-                        <th id="quantity">Quantity</th>
-                        <th id="price">Price</th>
-                        <th id="type">Type</th>
-                        <th id="status">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr th:each="result : ${results}">
-                    <td><a href="#"
-                           th:text="${result.getIssue().getKey()}"
-                           th:issuekey = "${result.getIssue().getKey()}"
-                           onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">
-                    </a></td>
-                    <td text="status"></td>
-                    <td th:text="${result.getItem().getItemTitle()}"></td>
-                    <td th:text="${result.getItem().getQuantity()}"></td>
-                    <td th:text="${result.getItem().getPrice()}"></td>
-                    <td th:text="${result.getItem().getType()}"></td>
-                    <td th:text="${result.getItem().getStatus()}"></td>
-                </tr>
-                </tbody>
-            </table>
+            <p id="results"></p>
         </div>
     </div>
 </body>

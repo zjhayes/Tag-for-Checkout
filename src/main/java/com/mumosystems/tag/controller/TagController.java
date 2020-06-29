@@ -23,8 +23,24 @@ public class TagController
     public ModelAndView getProjectPage(@AuthenticationPrincipal AtlassianHostUser hostUser, @RequestParam("projectKey") String projectKey)
     {
         ModelAndView model = new ModelAndView();
+        model.setViewName("project-page");
+        return model;
+    }
+
+    @RequestMapping(value = "/hello-world", method = RequestMethod.GET)
+    @ResponseBody
+    public List<SearchResult> helloWorld() throws Exception
+    {
+        return search.searchEachIssueInProjectForItem("BAR", "Used to staple paper.", 20,0);
+    }
+
+    @RequestMapping(value = "/tagSearch", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView runTagSearch(@AuthenticationPrincipal AtlassianHostUser hostUser, @RequestParam("projectKey") String projectKey)
+    {
+        ModelAndView model = new ModelAndView();
         try {
-            model.setViewName("project-page");
+            model.setViewName("results");
             List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
             model.addObject("results", results);
         } catch(Exception ex)
@@ -32,26 +48,6 @@ public class TagController
             model.setViewName("error");
             model.addObject("error_message", ex.getMessage());
         }
-        return model;
-    }
-
-    @RequestMapping(value = "/hello-world", method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView helloWorld(@AuthenticationPrincipal AtlassianHostUser hostUser) {
-        System.out.println("XXXX HERE!");
-        ModelAndView model = new ModelAndView();
-        model.setViewName("error");
-        model.addObject("error_message", "Hello World");
-        return model;
-    }
-
-    @RequestMapping(value = "/tagSearch", method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView runTagSearch(@AuthenticationPrincipal AtlassianHostUser hostUser)
-    {
-        ModelAndView model = new ModelAndView();
-        model.setViewName("error");
-        model.addObject("error_message", "Here");
         return model;
     }
 }
