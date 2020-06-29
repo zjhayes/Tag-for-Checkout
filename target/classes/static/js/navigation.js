@@ -6,3 +6,8 @@ function goToJiraIssue(issueKey) {
         issueKey: issueKey
     });
 }
+
+// Reload parent page.
+function reload() {
+    AP.navigator.reload();
+}

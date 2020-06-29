@@ -16,7 +16,7 @@
     "enabled": "/enabled",
     "disabled": "/disabled"
   },
-  "scopes": ["READ"],
+  "scopes": ["READ", "WRITE"],
   "modules": {
     "generalPages": [
       {

@@ -6,3 +6,4 @@ addon:
   base-url: https://5f24a0bfd525.ngrok.io
 
 logging.level.com.atlassian.connect.spring: DEBUG
+spring.thymeleaf.cache: false
