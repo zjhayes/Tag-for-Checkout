@@ -26,18 +26,18 @@
             <td th:text="${result.getItem().getPrice()}"></td>
             <td th:text="${result.getItem().getType()}"></td>
             <td>
-                <select th:field="${result.item.status}">
-                    <option value="">Select</option>
-                    <option value="NEW">NEW</option>
-                    <option value="ORDERED">ORDERED</option>
-                    <option value="COMPLETED">COMPLETED</option>
-                </select>
+                <p class="float-left" th:text="${result.getItem().getStatus()}"></p>
+                <button th:if="${result.getItem().getStatus().equals('ORDERED')}"
+                        onclick="return false"
+                        type="submit"
+                        class="aui-button aui-button-primary action-button float-left">Received
+                </button>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="center-container">
-        <button th:sql = "'issue+in+(' + ${issueKeysString} + ')'";
+        <button th:sql="'issue+in+(' + ${issueKeysString} + ')'"
                 onclick="javascript:goToJQLSearch(this.getAttribute('sql')); return false"
                 type="submit"
                 class="aui-button aui-button-primary center top-space">View Issues

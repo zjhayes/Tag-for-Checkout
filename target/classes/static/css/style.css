@@ -68,6 +68,7 @@ form.aui .text.scan-text{
     height: 40px;
     font-size: 1.4em;
     margin-left: .5rem;
+    border: 2px solid #FF3860;
 }
 
 .aui-button.aui-button-primary:focus {
@@ -78,6 +79,7 @@ form.aui .text.scan-text{
     font-size: 1.4em;
     margin-left: .5rem;
     outline: 1px dashed #FF3860;
+    border: 2px solid #FF3860;
 }
 
 .aui-button.aui-button-primary:hover,
@@ -103,3 +105,8 @@ table.aui > tbody > tr {
     line-height: 3rem;
 }
 
+.aui-button.aui-button-primary.action-button {
+    margin: .6rem 0 0 2rem;
+    height: 25px;
+    font-size: 1rem;
+}
