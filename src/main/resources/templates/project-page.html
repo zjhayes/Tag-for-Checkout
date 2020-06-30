@@ -6,7 +6,7 @@
 <body class="aui-page-hybrid">
     <header class="aui-page-header">
         <div class="aui-page-header-inner">
-            <div class="aui-page-header-main intro-header">
+            <div class="aui-page-header-main intro-header center-container">
                 <img class="header-image center" src="/images/tag-logo.png" alt="Tag for Checkout">
             </div>
         </div>
@@ -14,11 +14,10 @@
     <div class="aui-page-panel main-panel">
         <div class="aui-page-panel-inner">
             <section class="aui-page-panel-item">
-                <form class="aui" action="#" onsubmit="search(this); return false" method="GET">
+                <form class="aui center-container" action="#" onsubmit="search(this); return false" method="GET">
                     <div class="field-group center">
-                        <!--<label for="name">Item SKU<span class="aui-icon icon-required">required</span></label>-->
                         <input id="sku" class="text float-left scan-text" type="text"
-                             name="name" placeholder="Scan barcode or enter SKU to check item...">
+                               name="name" placeholder="Scan barcode or enter SKU to check item...">
                         <button type="submit" id="scan-button" class="aui-button aui-button-primary float-left"></button>
                     </div>
                 </form>

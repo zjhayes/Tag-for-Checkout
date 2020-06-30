@@ -14,9 +14,6 @@
             <th id="status">Status</th>
         </tr>
         </thead>
-        <script>
-
-        </script>
         <tbody>
         <tr th:each="result : ${results}">
             <td><a href="#"
@@ -33,12 +30,11 @@
         </tr>
         </tbody>
     </table>
-
-
-    <button th:sql = "'issue+in+(' + ${issueKeysString} + ')'";
-            onclick="javascript:goToJQLSearch(this.getAttribute('sql')); return false"
-            target="_blank"
-            type="submit"
-            class="aui-button aui-button-primary center top-space">View Issues
-    </button>
+    <div class="center-container">
+        <button th:sql = "'issue+in+(' + ${issueKeysString} + ')'";
+                onclick="javascript:goToJQLSearch(this.getAttribute('sql')); return false"
+                type="submit"
+                class="aui-button aui-button-primary center top-space">View Issues
+        </button>
+    </div>
 </section>
