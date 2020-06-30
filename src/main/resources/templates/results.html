@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <section class="results-section">
     <table class="aui">
         <thead>
@@ -15,7 +14,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="result : ${results}">
+        <tr th:each="result,iter : ${results}">
             <td><a href="#"
                    th:text="${result.getIssue().getKey()}"
                    th:issuekey = "${result.getIssue().getKey()}"
@@ -26,7 +25,14 @@
             <td th:text="${result.getItem().getQuantity()}"></td>
             <td th:text="${result.getItem().getPrice()}"></td>
             <td th:text="${result.getItem().getType()}"></td>
-            <td th:text="${result.getItem().getStatus()}"></td>
+            <td>
+                <select th:field="${result.item.status}">
+                    <option value="">Select</option>
+                    <option value="NEW">NEW</option>
+                    <option value="ORDERED">ORDERED</option>
+                    <option value="COMPLETED">COMPLETED</option>
+                </select>
+            </td>
         </tr>
         </tbody>
     </table>

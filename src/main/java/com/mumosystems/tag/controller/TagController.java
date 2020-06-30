@@ -21,7 +21,7 @@ public class TagController
     private SearchService search;
 
     @RequestMapping(value = "/tag", method = RequestMethod.GET)
-    public ModelAndView getProjectPage(@AuthenticationPrincipal AtlassianHostUser hostUser, @RequestParam("projectKey") String projectKey)
+    public ModelAndView getProjectPage(@RequestParam("projectKey") String projectKey)
     {
         ModelAndView model = new ModelAndView();
         model.setViewName("project-page");
@@ -30,12 +30,13 @@ public class TagController
 
     @RequestMapping(value = "/tagSearch", method = RequestMethod.GET)
     @ResponseBody
-    public ModelAndView runTagSearch(@RequestParam("projectKey") String projectKey)
+    public ModelAndView runTagSearch(@RequestParam("projectKey") String projectKey, @RequestParam("sku") String sku)
     {
         ModelAndView model = new ModelAndView();
-        try {
+        try
+        {
             model.setViewName("results");
-            List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, "Used to staple paper.", 20,0);
+            List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, sku, 20,0);
             model.addObject("results", results);
             model.addObject("issueKeysString", createIssueKeyList(results));
         } catch(Exception ex)
@@ -46,6 +47,16 @@ public class TagController
         return model;
     }
 
+    @RequestMapping(value = "/updateItemStatus", method = RequestMethod.GET)
+    @ResponseBody
+    public String changeItemStatus(@RequestParam("issueKey") String issueKey, @RequestParam("itemId") String itemId,
+                                   @RequestParam("newStatus") String newStatus)
+    {
+        System.out.println("Issue: " + issueKey);
+        return "finished";
+    }
+
+    // TODO Find way to move this to javascript
     private String createIssueKeyList(List<SearchResult> results)
     {
         List<String> keyList = new ArrayList<>();
