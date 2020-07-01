@@ -1,11 +1,12 @@
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/services/JiraService.java
-/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/services/ThymeleafCompliantContextModelAttributeProvider.java
+/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/model/Field.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/services/SearchService.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/model/SearchResult.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/model/Item.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/AddonApplication.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/controller/ThymeleafController.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/model/Department.java
+/Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/services/ThymeleafCompliantContextModelAttributeProvider.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/controller/JiraController.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/model/CheckoutProperties.java
 /Users/zacharyhayes/development/java-tag-for-checkout/tag/src/main/java/com/mumosystems/tag/controller/TagController.java

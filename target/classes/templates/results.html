@@ -6,6 +6,7 @@
         <tr>
             <th id="issue">Issue</th>
             <th id="issueStatus">Issue Status</th>
+            <th id="reporter">Reporter</th>
             <th id="item">Item</th>
             <th id="quantity">Quantity</th>
             <th id="price">Price</th>
@@ -20,19 +21,13 @@
                    th:issuekey = "${result.getIssue().getKey()}"
                    onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">
             </a></td>
-            <td text="status"></td>
+            <td th:text="${result.getIssue().getFields().get('status').get('name').textValue()}"></td>
+            <td th:text="${result.getIssue().getFields().get('reporter').get('displayName').textValue()}"></td>
             <td th:text="${result.getItem().getItemTitle()}"></td>
             <td th:text="${result.getItem().getQuantity()}"></td>
             <td th:text="${result.getItem().getPrice()}"></td>
             <td th:text="${result.getItem().getType()}"></td>
-            <td th:text="${result.getItem().getStatus()}">
-                <!--<p class="float-left" th:text="${result.getItem().getStatus()}"></p>
-                <button th:if="${result.getItem().getStatus().equals('ORDERED')}"
-                        onclick="return false"
-                        type="submit"
-                        class="aui-button aui-button-primary action-button float-left">Received
-                </button>-->
-            </td>
+            <td th:text="${result.getItem().getStatus()}"></td>
         </tr>
         </tbody>
     </table>
