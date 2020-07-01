@@ -25,13 +25,13 @@
             <td th:text="${result.getItem().getQuantity()}"></td>
             <td th:text="${result.getItem().getPrice()}"></td>
             <td th:text="${result.getItem().getType()}"></td>
-            <td>
-                <p class="float-left" th:text="${result.getItem().getStatus()}"></p>
+            <td th:text="${result.getItem().getStatus()}">
+                <!--<p class="float-left" th:text="${result.getItem().getStatus()}"></p>
                 <button th:if="${result.getItem().getStatus().equals('ORDERED')}"
                         onclick="return false"
                         type="submit"
                         class="aui-button aui-button-primary action-button float-left">Received
-                </button>
+                </button>-->
             </td>
         </tr>
         </tbody>

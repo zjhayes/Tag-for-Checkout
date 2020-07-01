@@ -3,7 +3,7 @@ spring.datasource.url: jdbc:hsqldb:file:addon-db # Use a file-based backing stor
 
 addon:
   key: tag
-  base-url: https://4d164ae8fec6.ngrok.io
+  base-url: https://fa0788224f79.ngrok.io
 
 logging.level.com.atlassian.connect.spring: DEBUG
 spring.thymeleaf.cache: false

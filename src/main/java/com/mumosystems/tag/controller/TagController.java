@@ -47,15 +47,6 @@ public class TagController
         return model;
     }
 
-    @RequestMapping(value = "/updateItemStatus", method = RequestMethod.GET)
-    @ResponseBody
-    public String changeItemStatus(@RequestParam("issueKey") String issueKey, @RequestParam("itemId") String itemId,
-                                   @RequestParam("newStatus") String newStatus)
-    {
-        System.out.println("Issue: " + issueKey);
-        return "finished";
-    }
-
     // TODO Find way to move this to javascript
     private String createIssueKeyList(List<SearchResult> results)
     {

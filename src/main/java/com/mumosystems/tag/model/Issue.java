@@ -1,14 +1,21 @@
 package com.mumosystems.tag.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.mumosystems.tag.services.FieldJsonDeserializer;
+import org.json.simple.JSONObject;
 
-@JsonIgnoreProperties({"fields", "expand"})
+import java.util.Map;
+
+@JsonIgnoreProperties({"expand"})
 public class Issue
 {
     private String self;
     private String id;
     private String key;
     private CheckoutProperties checkout;
+    //@JsonDeserialize(using = FieldJsonDeserializer.class)
+    private Map<String, Object> fields;
 
     public String getSelf()
     {
@@ -38,6 +45,16 @@ public class Issue
     public void setKey (String key)
     {
         this.key = key;
+    }
+
+    public void setFields(Map<String, Object> fields)
+    {
+        this.fields = fields;
+    }
+
+    public Map<String, Object> getFields()
+    {
+        return fields;
     }
 
     public CheckoutProperties getCheckout()
