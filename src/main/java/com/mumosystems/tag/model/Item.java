@@ -9,7 +9,7 @@ public class Item
 {
     private String itemId;
 
-    private String quantity;
+    private int quantity;
 
     private String itemTitle;
 
@@ -37,12 +37,12 @@ public class Item
         this.itemId = itemId;
     }
 
-    public String getQuantity()
+    public int getQuantity()
     {
         return quantity;
     }
 
-    public void setQuantity(String quantity)
+    public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
@@ -59,7 +59,7 @@ public class Item
 
     public String getPrice()
     {
-        return "$" + String.format("%.2f", price);
+        return "$" + String.format("%.2f", price * quantity);
     }
 
     public void setPrice(float price)
