@@ -27,8 +27,8 @@ h1, p.subtitle {
     display: inline-block;
 }
 
-results-section {
-    background-color: red;
+.bold-text {
+    font-weight: bold;
 }
 
 #scan-button {

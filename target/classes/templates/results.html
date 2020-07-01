@@ -16,7 +16,7 @@
         </thead>
         <tbody>
         <tr th:each="result,iter : ${results}">
-            <td><a href="#"
+            <td><a href="#" class="bold-text"
                    th:text="${result.getIssue().getKey()}"
                    th:issuekey = "${result.getIssue().getKey()}"
                    onclick="javascript:goToJiraIssue(this.getAttribute('issuekey'));">

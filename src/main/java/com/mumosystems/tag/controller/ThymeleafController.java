@@ -1,6 +1,5 @@
 package com.mumosystems.tag.controller;
 
-import com.atlassian.connect.spring.IgnoreJwt;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 

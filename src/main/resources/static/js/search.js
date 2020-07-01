@@ -15,18 +15,3 @@ function search(projectKey, searchString) {
         };
     });
 }
-
-function updateIssueStatus() {
-    AP.context.getToken(function(token) {
-        let request = new XMLHttpRequest();
-        let endpoint = '/updateItemStatus';
-        request.open('GET', endpoint);
-        request.setRequestHeader("Authorization", "JWT " + token)
-        request.send();
-        request.onreadystatechange = function () {
-            if (request.readyState === 4) {
-                document.getElementById('results').innerHTML = request.responseText;
-            }
-        };
-    });
-}
