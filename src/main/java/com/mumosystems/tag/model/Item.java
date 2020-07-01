@@ -13,7 +13,7 @@ public class Item
 
     private String itemTitle;
 
-    private String price;
+    private float price;
 
     private String vendorId;
 
@@ -59,10 +59,10 @@ public class Item
 
     public String getPrice()
     {
-        return price;
+        return "$" + String.format("%.2f", price);
     }
 
-    public void setPrice(String price)
+    public void setPrice(float price)
     {
         this.price = price;
     }
