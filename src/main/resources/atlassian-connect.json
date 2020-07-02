@@ -2,7 +2,7 @@
   "key": "${addon.key}",
   "baseUrl": "${addon.base-url}",
   "name": "Tag for Checkout",
-  "description": "A search tool for managing Checkout items.",
+  "description": "A search tool for managing Checkout assets.",
   "vendor": {
     "name": "Mumo Systems",
     "url": "https://www.mumosystems.com"
@@ -18,16 +18,6 @@
   },
   "scopes": ["READ", "WRITE"],
   "modules": {
-    "generalPages": [
-      {
-        "key": "thymeleaf-page-jira",
-        "location": "system.top.navigation.bar",
-        "name": {
-          "value": "Thymeleaf"
-        },
-        "url": "/thymeleaf"
-      }
-    ],
     "jiraProjectPages": [
       {
         "key": "tag-for-checkout",
