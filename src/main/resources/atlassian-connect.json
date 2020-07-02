@@ -2,7 +2,7 @@
   "key": "${addon.key}",
   "baseUrl": "${addon.base-url}",
   "name": "Tag for Checkout",
-  "description": "Manage your Checkout items faster with any standard USB barcode reader.",
+  "description": "A search tool for managing Checkout items.",
   "vendor": {
     "name": "Mumo Systems",
     "url": "https://www.mumosystems.com"

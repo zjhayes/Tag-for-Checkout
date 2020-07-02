@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <section class="results-section">
+    <p class="lightgray-text" th:text="'SKU: ' + ${sku}"></p>
     <table class="aui">
         <thead>
         <tr>
@@ -11,6 +12,7 @@
             <th id="quantity">Quantity</th>
             <th id="price">Price</th>
             <th id="type">Type</th>
+            <th id="department">Department</th>
             <th id="status">Status</th>
         </tr>
         </thead>
@@ -27,10 +29,12 @@
             <td th:text="${result.getItem().getQuantity()}"></td>
             <td th:text="${result.getItem().getPrice()}"></td>
             <td class="center-container" th:text="${result.getItem().getType()}"></td>
+            <td th:text="${result.getIssue().getCheckout().getDepartment().getName()}"></td>
             <td th:text="${result.getItem().getStatus()}"></td>
         </tr>
         </tbody>
     </table>
+    <p class="lightgray-text float-left" th:text="'Results: ' + ${results.size()}"></p>
     <div class="center-container">
         <button th:sql="'issue+in+(' + ${issueKeysString} + ')'"
                 onclick="javascript:goToJQLSearch(this.getAttribute('sql')); return false"

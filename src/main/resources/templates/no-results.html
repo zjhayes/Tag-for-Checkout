@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<section class="results-section">
+    <p class="lightgray-text" th:text="'SKU: ' + ${sku}"></p>
+    <h3>Item Not Found</h3>
+    <h4 th:text="'No issues were found for item with SKU ' + ${sku}"></h4>
+    <p class="lightgray-text float-left" th:text="'Results: ' + ${results.size()}"></p>
+</section>

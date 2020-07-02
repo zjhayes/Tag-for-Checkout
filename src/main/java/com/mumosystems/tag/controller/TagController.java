@@ -22,6 +22,7 @@ public class TagController
     public ModelAndView getProjectPage(@RequestParam("projectKey") String projectKey)
     {
         ModelAndView model = new ModelAndView();
+        model.addObject("projectKey", projectKey);
         model.setViewName("project-page");
         return model;
     }
@@ -33,8 +34,16 @@ public class TagController
         ModelAndView model = new ModelAndView();
         try
         {
-            model.setViewName("results");
             List<SearchResult> results = search.searchEachIssueInProjectForItem(projectKey, sku, 20,0);
+            if(!results.isEmpty())
+            {
+                model.setViewName("results");
+            }
+            else
+            {
+                model.setViewName("no-results");
+            }
+            model.addObject("sku", sku);
             model.addObject("results", results);
             model.addObject("issueKeysString", createIssueKeyList(results));
         } catch(Exception ex)
